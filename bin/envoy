@@ -9,9 +9,9 @@ if (file_exists(__DIR__.'/../vendor/autoload.php')) {
 
 $app = new Symfony\Component\Console\Application('Laravel Envoy', '2.12.0');
 
-$app->add(new Laravel\Envoy\Console\RunCommand);
-$app->add(new Laravel\Envoy\Console\SshCommand);
-$app->add(new Laravel\Envoy\Console\InitCommand);
-$app->add(new Laravel\Envoy\Console\TasksCommand);
+$app->addCommand(new Laravel\Envoy\Console\RunCommand);
+$app->addCommand(new Laravel\Envoy\Console\SshCommand);
+$app->addCommand(new Laravel\Envoy\Console\InitCommand);
+$app->addCommand(new Laravel\Envoy\Console\TasksCommand);
 
 $app->run();
